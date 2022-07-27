@@ -1,6 +1,8 @@
 <!doctype html>
 <title>{% block title %}{% endblock %} - Flaskr</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}",type="text/css">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/zk.css') }}">
 
 <nav>
@@ -20,14 +22,18 @@
   <header>
     {% block header %}{% endblock %}
   </header>
+
   {% for message in get_flashed_messages() %}
     <div class="flash">{{ message }}</div>
   {% endfor %}
+
   {% block content %}{% endblock %}
 </section>
 
-<div id="zhifubao">
-  <h2 id="wenzi">喜欢就扫码打赏一下吧~</h2>
-  <img src="./static/image/zhifubao.jpg" alt="收款码" id="tupian" style="width:150px;">
 
+<div id="zhifubao">
+  <h5 id="wenzi">喜欢就扫码打赏一下吧~</h5>
+  <img src="./static/image/zhifubao.jpg" alt="收款码" id="tupian" style="width:150px;">
 </div>
+
+
